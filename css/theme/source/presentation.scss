@@ -1,0 +1,162 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(./fonts/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 26px;
+$mainFont: 'Calibri', 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Calibri', 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: inherit;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.4em;
+$heading2Size: 1.3em;
+$heading3Size: 1.0em;
+$heading4Size: 1.0em;
+
+
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal {
+    .slides {
+        section, section > section {
+            text-align: left;
+            padding: 0em;
+        }
+    }
+
+    h1 {
+        margin: 1.2em 0;
+        line-height: 200%;
+    }
+
+    h2 {
+        margin: 0 0 30px 0;
+    }
+
+    h3 {
+        font-weight: unset;
+        margin-top: 30px;
+    }
+
+    ol, dl, ul {
+        line-height: 2.2;
+        margin: 0 0 0 1.5em;
+    }
+
+    ul {
+        list-style-type: none;
+
+        ul {
+            list-style-type: disc;
+
+            ul {
+                list-style-type: square;
+            }
+
+            & > li:before {
+                content: none;
+            }
+        }
+
+        & > li:before {
+            content: "\2013";
+            position: absolute;
+            margin-left: -0.8em;
+        }
+    }
+
+    blockquote {
+        width: 90%;
+        background: unset;
+        box-shadow: unset;
+    }
+
+    code {
+        margin: 0em 0em 0em 0em;
+    }
+
+    pre {
+        code {
+            max-height: 600px;
+        }
+    }
+
+    table {
+        width: 100%;
+        border: 0;
+
+        td {
+            border-bottom: 2px solid black;
+        }
+
+        tr {
+            th:empty {
+                border: 0px solid black;
+            }
+
+            th, td {
+                border-right: 2px solid black;
+            }
+
+            th:last-child, td:last-child {
+                border-right: none;
+            }
+        }
+    }
+
+    img {
+        margin: auto;
+        display: block;
+    }
+
+    .hljs {
+        background: white;
+        color: black;
+    }
+
+    .Matlab {
+        .hljs-comment {
+            color: #449949;
+        }
+
+        .hljs-string {
+            color: #B452F3;
+        }
+
+        .hljs-built_in {
+            color: unset
+        }
+    }
+
+}
