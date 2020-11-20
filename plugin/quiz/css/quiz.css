@@ -11,9 +11,10 @@ ol { list-style-type: decimal; }
 ol > li { list-style-type: decimal; margin-left: 20px; }
 
 .button {
-    width: auto;
+    width: 150px;
     margin: 20px 20px !important;
     border-radius: 5px;
+    text-align: center;
 }
 
 .startQuiz {
@@ -25,19 +26,19 @@ ol > li { list-style-type: decimal; margin-left: 20px; }
 }
 
 .backToQuestion {
-  float: left !important;
+  display:  none !important;
 }
 
 .nextQuestion, .checkAnswer {
-  float: right !important;
+  float: left !important;
 }
 
 .tryAgain {
-    float: left
+    display: none !important;
 }
 
 .nextSlide {
-    float: right
+    display: none !important
 }
 
 /* clearfix */
@@ -153,7 +154,7 @@ ol.questions {
     background: rgba(41, 87, 148, 0.973);
     padding: 5px 15px;
     margin: 20px !important;
-    width: max-content;
+    /* width: max-content; */
     font-style: italic;
     line-height: normal;
 }
