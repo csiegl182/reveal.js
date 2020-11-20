@@ -47,6 +47,16 @@ function prepareQuizzes(config) {
 
                 quizzes[i].id = quizId;
 
+                height = Reveal.getConfig().height;
+                parent = quizzes[i].parentNode;
+                quizArea = quizzes[i].getElementsByClassName('quizArea')[0];
+                quizArea.style.height = 0;
+                remainingHeight = height - parent.offsetHeight;
+                quizArea.style.height = remainingHeight + 'px';
+
+                quizResults = quizzes[i].getElementsByClassName('quizResults')[0];
+                quizResults.style.height = remainingHeight + 'px';
+
                 resultChartCanvasNode = quizzes[i].getElementsByClassName("quizResultChart")[0];
                 resultChartCanvasNode.id = canvasId;
 
