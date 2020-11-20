@@ -73,10 +73,28 @@ function prepareQuizzes(config) {
                     onCompleteQuiz: function (result) { createResult(result, config, canvasId); }
                 }
 
+                slickQuizConfig.animationCallbacks = {
+                    setupQuiz: function () { Reveal.layout(); },
+                    startQuiz: function () { Reveal.layout(); },
+                    resetQuiz: function () { Reveal.layout(); },
+                    checkAnswer: function () { Reveal.layout(); showCorrectAnswer(quizId); },
+                    nextQuestion: function () { Reveal.layout(); },
+                    backToQuestion: function () { Reveal.layout(); },
+                    completeQuiz: function () { Reveal.layout(); }
+                },
+
                 $('#' + quizId).slickQuiz(slickQuizConfig);
+
             }
         });
     });
+}
+
+
+function showCorrectAnswer(quizId)
+{
+    console.log("Answer checked " + quizId)
+    quiz = document.getElementById(quizId);
 }
 
 function createNewChart(config, canvas_id)
