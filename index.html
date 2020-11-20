@@ -13,6 +13,9 @@
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+	<!-- Theme used for quiz -->
+	<link rel="stylesheet" href="plugin/quiz/css/quiz.css" id="quiz">
 </head>
 
 <body>
@@ -20,10 +23,159 @@
 		<div class="slides">
 			<section>Slide 1</section>
 			<section>Slide 2</section>
+			<section>
+				<h2>Abschlussquiz 1</h2>
+				<div class="quizInstance">
+					<div class="quizArea">
+						<!-- where the quiz gets built -->
+					</div>
+					<div class="quizResults">
+						<div class="quizResultsCopy">
+							<!-- where the quiz result copy goes -->
+							<div style="width: 60%">
+								<h3 style="text-align: center">Ergebnis</h3>
+								<canvas class="quizResultChart"></canvas>
+							</div>
+						</div>
+					</div>
+					<script data-quiz>
+						quiz = {
+							"info": {
+								"name": "Abschlussquiz",
+								"main": "Wird nicht verwendet",
+								"level1": "Sehr gut!!!",
+								"level2": "Gut gemacht!",
+								"level3": "Sie müssen das Kapitel wiederholen.",
+								"level4": "Sie müssen das Kapitel dringend wiederholen.",
+								"level5": "Bitte beschäfrigen Sie sich nochmal ausführlich mit dem Kapitel"
+							},
+							"questions": [
+								{
+									"q": "Mit welchem Befehl lässt sich folgende Matrix anlegen: <br/> $$\\ve{A} = \\left[\\begin{array}{cc}1 & 2 \\\\ 3 & 4\\end{array}\\right]$$",
+									"a": [
+										{
+											"option": "<code>>> A = [1:4]</code>",
+											"correct": false
+										},
+										{
+											"option": "<code>>> A = [1, 2; 3, 4]</code>",
+											"correct": true
+										},
+										{
+											"option": "<code>>> A = [1; 3, 2; 4]</code>",
+											"correct": false
+										}
+									],
+									"correct": "Das ist korrekt",
+									"incorrect": "Leider falsch"
+								},
+								{
+									"q": "Welches Ergebnis liefert <br/> <code>>> 1 / 0</code>",
+									"a": [
+										{
+											"option": "<code>Error: division by zero!</code>",
+											"correct": false
+										},
+										{
+											"option": "<code>NaN</code>",
+											"correct": false
+										},
+										{
+											"option": "<code>Inf</code>",
+											"correct": true
+										}
+									],
+									"correct": "Richtig",
+									"incorrect": "Falsch"
+								}
+							]
+						}
+					</script>
+				</div>
+			</section>
+			<section>
+				<h2>Abschlussquiz 2</h2>
+				<div class="quizInstance">
+					<div class="quizArea">
+						<!-- where the quiz gets built -->
+					</div>
+					<div class="quizResults">
+						<div class="quizResultsCopy">
+							<!-- where the quiz result copy goes -->
+							<div style="width: 60%">
+								<h3 style="text-align: center">Ergebnis</h3>
+								<canvas class="quizResultChart"></canvas>
+							</div>
+						</div>
+					</div>
+					<script data-quiz>
+						quiz = {
+							"info": {
+								"name": "Abschlussquiz",
+								"main": "Wird nicht verwendet",
+								"level1": "Sehr gut!!!",
+								"level2": "Gut gemacht!",
+								"level3": "Sie müssen das Kapitel wiederholen.",
+								"level4": "Sie müssen das Kapitel dringend wiederholen.",
+								"level5": "Bitte beschäfrigen Sie sich nochmal ausführlich mit dem Kapitel"
+							},
+							"questions": [
+								{
+									"q": "Mit welchem Befehl lässt sich folgende Matrix anlegen: <br/> $$\\ve{A} = \\left[\\begin{array}{cc}1 & 2 \\\\ 3 & 4\\end{array}\\right]$$",
+									"a": [
+										{
+											"option": "<code>>> A = [1:4]</code>",
+											"correct": false
+										},
+										{
+											"option": "<code>>> A = [1, 2; 3, 4]</code>",
+											"correct": true
+										},
+										{
+											"option": "<code>>> A = [1; 3, 2; 4]</code>",
+											"correct": false
+										}
+									],
+									"correct": "Das ist korrekt",
+									"incorrect": "Leider falsch"
+								},
+								{
+									"q": "Welches Ergebnis liefert <br/> <code>>> 1 / 0</code>",
+									"a": [
+										{
+											"option": "<code>Error: division by zero!</code>",
+											"correct": false
+										},
+										{
+											"option": "<code>NaN</code>",
+											"correct": false
+										},
+										{
+											"option": "<code>Inf</code>",
+											"correct": true
+										}
+									],
+									"correct": "Richtig",
+									"incorrect": "Falsch"
+								}
+							]
+						}
+					</script>
+				</div>
+			</section>
 			<section data-markdown data-separator-vertical="^\r?\n--\r?\n$">
 				<textarea data-template>
-					# Quiz
+					# Level 1
 
+					## Level 2
+
+					### Level 3
+
+					#### Level 4
+
+					##### Level 5
+
+					###### Level 6
 				</textarea>
 			</section>
 		</div>
@@ -35,6 +187,9 @@
 	<script src="plugin/highlight/highlight.js"></script>
 	<script src="plugin/math/math.js"></script>
 	<script src="plugin/chalkboard/plugin.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+	<script src="plugin/quiz/js/quiz.js"></script>
 	<script>
 		// More info about initialization & config:
 		// - https://revealjs.com/initialization/
@@ -42,7 +197,7 @@
 		Reveal.initialize({
 			hash: true,
 			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath, RevealChalkboard],
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath, RevealChalkboard, RevealQuiz],
 			controls: false,
 			progress: false,
 			center: false,
@@ -72,6 +227,29 @@
 					}
 				},
 				CommonHTML: { scale: 200 }
+			},
+			quiz: {
+				"slickQuiz": {
+					"preventUnanswered": true,
+					"checkAnswerText": "Überprüfen",
+					"nextQuestionText": "Weiter >>",
+					"backButtonText": "<< Zurück",
+					"tryAgainText": "Nochmal",
+					"nextSlideText": "Weiter mit der Präsentation",
+					"preventUnansweredText": "Sie müssen mindestens eine Antwort angeben.",
+					"questionCountText": "Frage %current von %total",
+					"skipStartButton": true,
+					"displayQuestionNumber": false,
+					"disableRanking": true,
+					"disableScore": true,
+					"perQuestionResponseMessaging": true,
+					"perQuestionResponseAnswers": true,
+					"randomSortAnswers": true
+				},
+				"revealQuiz": {
+					"correctColor": "rgb(0, 128, 0)",
+					"incorrectColor": "rgb(255, 0, 0)"
+				}
 			}
 		});
 	</script>
