@@ -27,20 +27,12 @@ ol > li { list-style-type: decimal; margin-left: 20px; }
   position: relative;
 }
 
-.backToQuestion {
-  display:  none !important;
-}
-
 .nextQuestion, .checkAnswer {
   float: left !important;
 }
 
-.tryAgain {
+.tryAgain, .nextSlide, .backToQuestion {
     display: none !important;
-}
-
-.nextSlide {
-    display: none !important
 }
 
 /* clearfix */
@@ -160,8 +152,6 @@ ol.questions {
     color: rgba(123, 183, 231, 0.753);
     background: rgba(41, 87, 148, 0.973);
     padding: 5px 15px;
-    margin: 20px !important;
-    /* width: max-content; */
     font-style: italic;
     line-height: normal;
 }
@@ -188,5 +178,3 @@ ul.responses li.incorrect {
 ul.responses li p span {
     font-size: unset;
 }
-
-/* Quiz Plugin */
