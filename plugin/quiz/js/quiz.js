@@ -93,8 +93,17 @@ function prepareQuizzes(config) {
 
 function showCorrectAnswer(quizId)
 {
-    console.log("Answer checked " + quizId)
-    quiz = document.getElementById(quizId);
+    currentQuiz = document.getElementById(quizId);
+    incorrectAnswers = currentQuiz.querySelectorAll('.quizArea .questions .complete .answers .incorrect');
+
+    for (answer of incorrectAnswers)
+    {
+        console.log(answer)
+        if (answer.getElementsByTagName('input')[0].checked)
+        {
+            answer.className += " checked";
+        }
+    }
 }
 
 function createNewChart(config, canvas_id)
