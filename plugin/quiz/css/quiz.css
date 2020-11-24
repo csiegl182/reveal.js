@@ -94,7 +94,14 @@ ul.responses li p span {
 }
 
 .complete ul.answers li.incorrect.checked {
+    font-weight: bold;
     color: #B5121B;
+    font-style: italic;
+}
+
+.complete ul.answers li.correct.unchecked {
+    font-weight: bold;
+    color: #6C9F2E;
     font-style: italic;
 }
 
