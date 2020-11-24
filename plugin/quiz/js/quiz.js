@@ -75,7 +75,7 @@ function prepareQuizzes(config) {
 
                 slickQuizConfig.animationCallbacks = {
                     setupQuiz: function () { Reveal.layout(); },
-                    startQuiz: function () { Reveal.layout(); },
+                    startQuiz: function () { Reveal.getPlugin('math').init(Reveal); Reveal.layout(); },
                     resetQuiz: function () { Reveal.layout(); },
                     checkAnswer: function () { Reveal.layout(); showCorrectAnswer(quizId); },
                     nextQuestion: function () { Reveal.layout(); },
