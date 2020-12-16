@@ -352,6 +352,24 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   margin: auto;
   display: block; }
 
+.reveal ul.icons {
+  margin: 0px;
+  display: flex;
+  align-items: center; }
+  .reveal ul.icons li {
+    display: inline;
+    margin-right: 30px;
+    width: 30px; }
+    .reveal ul.icons li img {
+      margin: 0px;
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      background-color: black;
+      border-radius: 50%; }
+  .reveal ul.icons > li:before {
+    content: unset; }
+
 .reveal .hljs {
   background: white;
   color: black; }
