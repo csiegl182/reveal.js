@@ -164,6 +164,47 @@ $heading4Size: 1.0em;
         }
     }
 
+    ol.references {
+
+        counter-reset: refs;
+
+
+        li {
+            counter-increment: refs;
+            list-style-type: none;
+            margin: 0px;
+
+            ul {
+                margin: 0px;
+                display: inline;
+
+                li {
+                    display: inline;
+                }
+
+                li.title {
+                    font-style: italic;
+                }
+
+                & > li:before {
+                    content: unset;
+                }
+
+                & > li:after {
+                    content: ",";
+                }
+
+                & > li:last-child:after {
+                    content: ".";
+                }
+            }
+        }
+
+        & > li:before {
+            content: "["counter(refs)"]";
+        }
+    }
+
     .hljs {
         background: white;
         color: black;

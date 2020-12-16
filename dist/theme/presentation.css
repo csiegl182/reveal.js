@@ -370,6 +370,28 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   .reveal ul.icons > li:before {
     content: unset; }
 
+.reveal ol.references {
+  counter-reset: refs; }
+  .reveal ol.references li {
+    counter-increment: refs;
+    list-style-type: none;
+    margin: 0px; }
+    .reveal ol.references li ul {
+      margin: 0px;
+      display: inline; }
+      .reveal ol.references li ul li {
+        display: inline; }
+      .reveal ol.references li ul li.title {
+        font-style: italic; }
+      .reveal ol.references li ul > li:before {
+        content: unset; }
+      .reveal ol.references li ul > li:after {
+        content: ","; }
+      .reveal ol.references li ul > li:last-child:after {
+        content: "."; }
+  .reveal ol.references > li:before {
+    content: "[" counter(refs) "]"; }
+
 .reveal .hljs {
   background: white;
   color: black; }
