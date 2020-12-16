@@ -297,6 +297,21 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   text-align: left;
   padding: 0em; }
 
+.reveal .slides section.title h1 {
+  font-size: 2.8em; }
+
+.reveal .slides section.title .author {
+  font-size: 1.3em; }
+
+.reveal .slides section.title .acknowledgements {
+  display: block;
+  font-style: italic;
+  font-size: 1.0em;
+  text-align: center;
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-right: 60px; }
+
 .reveal h1 {
   margin: 1.2em 0;
   line-height: 200%; }
@@ -358,8 +373,8 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   align-items: center; }
   .reveal ul.icons li {
     display: inline;
-    margin-right: 30px;
-    width: 30px; }
+    margin-right: 1.3em;
+    width: 1.3em; }
     .reveal ul.icons li img {
       margin: 0px;
       display: block;
