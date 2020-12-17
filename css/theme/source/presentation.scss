@@ -201,6 +201,7 @@ $heading4Size: 1.0em;
 
                 li {
                     display: inline;
+                    counter-increment: unset;
                 }
 
                 li.title {
