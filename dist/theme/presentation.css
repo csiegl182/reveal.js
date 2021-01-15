@@ -349,9 +349,28 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   width: 90%;
   background: unset;
   box-shadow: unset; }
+  .reveal blockquote > p {
+    margin: 0px; }
 
 .reveal code {
-  margin: 0em 0em 0em 0em; }
+  margin: 0px; }
+
+.reveal div.MathJax_Display {
+  margin: 20px auto 20px 60px;
+  text-align: left;
+  width: min-content; }
+
+.reveal code > div.MathJax_Display,
+.reveal code > span.MathJax {
+  border: 2px solid black;
+  box-shadow: 4px 7px 8px 0px #757575;
+  padding: 8px; }
+
+.reveal code > span.MathJax {
+  margin-right: 7px; }
+
+.reveal blockquote > p > code > div.MathJax_Display {
+  text-align: center; }
 
 .reveal pre code {
   max-height: 600px; }

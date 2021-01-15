@@ -127,10 +127,35 @@ $heading4Size: 1.0em;
         width: 90%;
         background: unset;
         box-shadow: unset;
+
+        > p {
+            margin: 0px;
+        }
     }
 
     code {
-        margin: 0em 0em 0em 0em;
+        margin: 0px;
+    }
+
+    div.MathJax_Display {
+        margin: 20px auto 20px 60px;
+        text-align: left;
+        width: min-content;
+    }
+
+    code > div.MathJax_Display,
+    code > span.MathJax {
+        border: 2px solid black;
+        box-shadow: 4px 7px 8px 0px #757575;
+        padding: 8px;
+    }
+
+    code > span.MathJax {
+        margin-right: 7px;
+    }
+
+    blockquote > p > code > div.MathJax_Display {
+        text-align: center;
     }
 
     pre {
