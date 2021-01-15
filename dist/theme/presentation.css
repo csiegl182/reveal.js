@@ -351,6 +351,8 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   box-shadow: unset; }
   .reveal blockquote > p {
     margin: 0px; }
+    .reveal blockquote > p:first-child, .reveal blockquote > p:last-child {
+      display: block; }
 
 .reveal code {
   margin: 0px; }
@@ -369,7 +371,8 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal code > span.MathJax {
   margin-right: 7px; }
 
-.reveal blockquote > p > code > div.MathJax_Display {
+.reveal blockquote > p div.MathJax_Display {
+  margin: auto;
   text-align: center; }
 
 .reveal pre code {

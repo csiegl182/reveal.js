@@ -130,6 +130,11 @@ $heading4Size: 1.0em;
 
         > p {
             margin: 0px;
+
+            &:first-child,
+            &:last-child {
+                display: block;
+            }
         }
     }
 
@@ -154,7 +159,8 @@ $heading4Size: 1.0em;
         margin-right: 7px;
     }
 
-    blockquote > p > code > div.MathJax_Display {
+    blockquote > p div.MathJax_Display {
+        margin: auto;
         text-align: center;
     }
 
