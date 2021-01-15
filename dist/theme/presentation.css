@@ -369,6 +369,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   padding: 8px; }
 
 .reveal code > span.MathJax {
+  margin-left: 7px;
   margin-right: 7px; }
 
 .reveal blockquote > p div.MathJax_Display {
