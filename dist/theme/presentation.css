@@ -391,6 +391,14 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   .reveal table tr th:last-child, .reveal table tr td:last-child {
     border-right: none; }
 
+.reveal img.align-left {
+  margin-left: 60px; }
+
+.reveal img.align-right {
+  margin-right: 0;
+  position: absolute;
+  right: 0; }
+
 .reveal img {
   margin: auto;
   display: block; }
