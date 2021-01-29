@@ -376,7 +376,8 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   .reveal table tr th:empty {
     border: 0px solid black; }
   .reveal table tr th, .reveal table tr td {
-    border-right: 2px solid black; }
+    border-right: 2px solid black;
+    vertical-align: middle; }
   .reveal table tr th:last-child, .reveal table tr td:last-child {
     border-right: none; }
 
