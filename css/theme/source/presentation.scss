@@ -136,8 +136,10 @@ $indent: 60px;
         width: min-content;
     }
 
-    code > div.MathJax_Display,
-    code > span.MathJax {
+    em > div.MathJax_Display,
+    em > code > div.MathJax_Display,
+    em > span.MathJax,
+    em > code > span.MathJax {
         border: 2px solid black;
         box-shadow: 4px 7px 8px 0px #757575;
         padding: 8px;

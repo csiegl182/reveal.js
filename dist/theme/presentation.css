@@ -351,8 +351,10 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   text-align: left;
   width: min-content; }
 
-.reveal code > div.MathJax_Display,
-.reveal code > span.MathJax {
+.reveal em > div.MathJax_Display,
+.reveal em > code > div.MathJax_Display,
+.reveal em > span.MathJax,
+.reveal em > code > span.MathJax {
   border: 2px solid black;
   box-shadow: 4px 7px 8px 0px #757575;
   padding: 8px; }
