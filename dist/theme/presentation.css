@@ -317,6 +317,18 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   position: absolute;
   margin-top: -120px; }
 
+.reveal h2:first-child {
+  margin: 0 0 30px 0; }
+
+.reveal h2 {
+  margin: 30px 0 30px 0; }
+
+.reveal h3:first-child, .reveal h4:first-child, .reveal h5:first-child, .reveal h6:first-child {
+  margin: 0 0 20px 0; }
+
+.reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  margin: 20px 0 20px 0; }
+
 .reveal ol, .reveal dl, .reveal ul {
   line-height: 2.2;
   margin: 0 0 0 1.5em; }
